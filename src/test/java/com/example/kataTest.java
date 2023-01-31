@@ -22,5 +22,10 @@ public class kataTest {
 
         assertEquals(0, sum);
     }
-
-}
+    @Test
+    @DisplayName("Unknown amount of numbers")
+    void unknownAmountOfNumbersShouldReturnSum() {
+        int sum = kata.unknownAmount("3,9,6,7");
+        assertEquals(25,sum);
+    }
+    }
