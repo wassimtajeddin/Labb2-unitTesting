@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Objects;
 
-public class kata {
+public class Kata {
 
     public static int add(String numbers)
     {
@@ -20,9 +20,10 @@ public class kata {
 
         String[] detailed = numbers.split(",");
         int sum = 0;
-        for (int i = 0; i < detailed.length; i++) {
-            sum = sum + Integer.parseInt(detailed[i]);
-        } return sum ;
+        for (String string : detailed) {
+            sum = sum + Integer.parseInt(string);
+        }
+        return sum ;
     }
     }
 

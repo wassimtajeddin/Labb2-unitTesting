@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class kataTest {
+public class KataTest {
 
     @Test
     @DisplayName("An empty string should return 0")
     void anEmptyStringShouldReturn0(){
-        int sum = kata.add("");
+        int sum = Kata.add("");
 
         assertEquals(0,sum);
 
@@ -18,14 +18,14 @@ public class kataTest {
     @Test
     @DisplayName("Two numbers saperated with comma should return sum")
     void twoNumbersSaperatedWithCommaShouldReturnSum(){
-        int sum = kata.add("0,0");
+        int sum = Kata.add("0,0");
 
         assertEquals(0, sum);
     }
     @Test
     @DisplayName("Unknown amount of numbers")
     void unknownAmountOfNumbersShouldReturnSum() {
-        int sum = kata.unknownAmount("3,9,6,7");
+        int sum = Kata.unknownAmount("3,9,6,7");
         assertEquals(25,sum);
     }
     }
