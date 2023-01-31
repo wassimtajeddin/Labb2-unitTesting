@@ -15,4 +15,12 @@ public class kataTest {
         assertEquals(0,sum);
 
     }
+    @Test
+    @DisplayName("Two numbers saperated with comma should return sum")
+    void twoNumbersSaperatedWithCommaShouldReturnSum(){
+        int sum = kata.add("0,0");
+
+        assertEquals(0, sum);
+    }
+
 }
