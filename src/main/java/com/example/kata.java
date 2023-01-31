@@ -8,7 +8,10 @@ public class kata {
     {
         if(Objects.equals(numbers, ""))
             return 0;
-        return 0;
+        String[] detailed = numbers.split(",");
+        int number1 = Integer.parseInt(detailed [0]);
+        int number2 = Integer.parseInt(detailed [1]);
+            return number1+number2;
     }
     }
 
