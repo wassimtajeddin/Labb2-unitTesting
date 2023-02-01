@@ -1,5 +1,3 @@
-package com.example;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +23,14 @@ public class KataTest {
     @Test
     @DisplayName("Unknown amount of numbers")
     void unknownAmountOfNumbersShouldReturnSum() {
-        int sum = Kata.unknownAmount("3,9,6,7");
+        int sum = Kata.add("3,9,6,7");
         assertEquals(25,sum);
+    }
+    @Test
+    @DisplayName("Allow the Add method to handle new lines between numbers")
+    void allowTheAddMethodToHandleNewLinesBetweenNumbers(){
+        int sum = Kata.add("1\n2,3");
+        assertEquals(6,sum);
+
     }
     }
