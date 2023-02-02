@@ -42,6 +42,12 @@ public class KataTest {
         assertEquals(3,sum);
     }
     @Test
+    @DisplayName("Calling Add with a negative number will throw an exception")
+    void callingAddWithANegativeNumberShouldThrowAnException(){
+        var sum = Kata.isNegative("-1,2,-3");
+       assertEquals("Negatives not allowed",sum);
+    }
+    @Test
     @DisplayName("Numbers bigger than 1000 should be ignored")
     void numbersBiggerThan1000ShouldBeIgnored(){
         int sum = Kata.biggerThan1000("2,1001");
