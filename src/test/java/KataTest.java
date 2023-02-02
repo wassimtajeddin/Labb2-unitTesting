@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThatException;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class KataTest {
@@ -38,5 +40,12 @@ public class KataTest {
     void theBeginningOfTheStringShouldContainASeparateLine(){
         int sum = Kata.add("//;\n1;2");
         assertEquals(3,sum);
+    }
+
+    @Test
+    @DisplayName("Delimiters can be of any length")
+    void delimitersCanBeOfAnyLength(){
+        int sum = Kata.add("//[***]\n1***2***3");
+        assertEquals(6,sum);
     }
     }

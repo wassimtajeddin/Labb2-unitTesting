@@ -6,7 +6,7 @@ public class Kata {
     public static int add(String numbers)
     {
 
-        String[] detailed = numbers.replaceAll("\\D", "").split("");
+        String[] detailed = numbers.replaceAll("[^\\d]", "").split("");
         int sum = 0;
         if(Objects.equals(numbers, ""))
             return 0;
@@ -14,6 +14,7 @@ public class Kata {
             sum = sum + Integer.parseInt(string);
         }
             return sum ;
+
     }
     }
 
