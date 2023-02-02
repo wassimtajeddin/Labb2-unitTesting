@@ -41,7 +41,12 @@ public class KataTest {
         int sum = Kata.add("//;\n1;2");
         assertEquals(3,sum);
     }
-
+    @Test
+    @DisplayName("Numbers bigger than 1000 should be ignored")
+    void numbersBiggerThan1000ShouldBeIgnored(){
+        int sum = Kata.biggerThan1000("2,1001");
+        assertEquals(2,sum);
+    }
     @Test
     @DisplayName("Delimiters can be of any length")
     void delimitersCanBeOfAnyLength(){
