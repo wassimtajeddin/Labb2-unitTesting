@@ -48,4 +48,11 @@ public class KataTest {
         int sum = Kata.add("//[***]\n1***2***3");
         assertEquals(6,sum);
     }
+    @Test
+    @DisplayName("Allow multiple delimiters")
+    void allowMultipleDelimiters() {
+        int sum = Kata.add("//[*][%]\n1*2%3");
+        assertEquals(6, sum);
+    }
+
     }
