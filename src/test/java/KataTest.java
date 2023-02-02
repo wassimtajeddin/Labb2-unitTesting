@@ -33,4 +33,10 @@ public class KataTest {
         assertEquals(6,sum);
 
     }
+    @Test
+    @DisplayName("Support different delimiters")
+    void theBeginningOfTheStringShouldContainASeparateLine(){
+        int sum = Kata.add("//;\n1;2");
+        assertEquals(3,sum);
+    }
     }
