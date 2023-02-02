@@ -3,8 +3,7 @@ package com.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeRepositoryImp implements EmployeeRepository{
-
+public class EmployeeRepositoryImp implements EmployeeRepository {
     List<Employee> employees = new ArrayList<>();
     @Override
     public List<Employee> findAll() {
